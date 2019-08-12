@@ -15,9 +15,8 @@
             
                         <div class="form-group">
                             <label>Bank:</label>
-                            <select class="form-control" >
-                                <option>Access</option>
-                                <option>GTB</option>
+                            <select class="form-control"  (change)="onSelectedBankChange($event.target.value)">
+                                <option  *ngFor="let bank of bankList" >{{ bank.name }}</option>
                             </select>
                         </div>
 

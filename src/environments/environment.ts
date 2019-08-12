@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiBaseUrl: 'https://api.paystack.co/',
+  paystackSecretKey: 'sk_test_db8020ace94d91eb8399356244535d98c24497d9'
 };
 
 /*

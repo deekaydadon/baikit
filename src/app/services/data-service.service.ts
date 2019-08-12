@@ -1,0 +1,35 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataServiceService {
+
+  baseUrl: any;
+  httpOptions: any; 
+
+  constructor(private http: HttpClient) {
+    this.setHttpHeader();
+   }
+
+  ngOnInit() {
+    this.setHttpHeader();
+  }
+
+  setHttpHeader() {
+    this.baseUrl = environment.apiBaseUrl;
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':  `Bearer ${environment.paystackSecretKey}`
+      })
+    };
+    this.http.options = this.httpOptions;
+  }
+
+  fetchBankList() {
+    return this.http.get(`${this.baseUrl}bank`);
+  }
+}
