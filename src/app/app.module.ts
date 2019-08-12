@@ -24,7 +24,8 @@ import { RecipientsComponent } from './components/recipient/recipients/recipient
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -32,4 +32,8 @@ export class DataServiceService {
   fetchBankList() {
     return this.http.get(`${this.baseUrl}bank`);
   }
+
+  createRecipient(obj) {
+    return this.http.post(`${this.baseUrl}transferrecipient`, obj, this.httpOptions);
+  }
 }
