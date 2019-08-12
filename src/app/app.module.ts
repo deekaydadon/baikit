@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { RecipientCreateComponent } from './components/recipient/recipient-create/recipient-create.component';
+import { RecipientUpdateComponent } from './components/recipient/recipient-update/recipient-update.component';
+import { RecipientsComponent } from './components/recipient/recipients/recipients.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    RecipientCreateComponent,
+    RecipientUpdateComponent,
+    RecipientsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
