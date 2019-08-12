@@ -36,4 +36,8 @@ export class DataServiceService {
   createRecipient(obj) {
     return this.http.post(`${this.baseUrl}transferrecipient`, obj, this.httpOptions);
   }
+
+  fetchRecipientList() {
+    return this.http.get(`${this.baseUrl}transferrecipient`, this.httpOptions);
+  }
 }

@@ -66,7 +66,7 @@ export class RecipientCreateComponent implements OnInit {
     }
 
     this.isCreateBeneficiaryLoading = true;
-    
+
     const payload = {
       type : "nuban",
       name: this.bf.name.value,
@@ -78,16 +78,13 @@ export class RecipientCreateComponent implements OnInit {
 
     console.log("Calling create recipient api...");
 
-    this.dataService.createRecipient(payload).subscribe(res => {
-        console.log("Got RESPONSE...");
-        console.log(res);
+    this.dataService.createRecipient(payload).subscribe(
+      res => {
         if (res["status"] === true) {
           alert("Successfully added beneficiary");
         }
       },
       error => {
-        console.log('oops', error);
-        console.log(error["error"].message);
         alert(error["error"].message);
       }
     );
