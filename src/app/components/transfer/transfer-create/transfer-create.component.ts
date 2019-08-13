@@ -94,6 +94,12 @@ export class TransferCreateComponent implements OnInit {
       return;
     }
 
+    //check if user has recipient
+    if (this.beneficiaries.length < 1) {
+      alert("You have no beneficiary. Please add one");
+      return;
+    }
+
     this.uniqueId++; //unique id for each recpient added
 
     const recipient = {

@@ -37,6 +37,10 @@ export class DataServiceService {
     return this.http.post(`${this.baseUrl}transferrecipient`, obj, this.httpOptions);
   }
 
+  deleteRecipient(recipientCode) {
+    return this.http.delete(`${this.baseUrl}transferrecipient/${recipientCode}`, this.httpOptions);
+  }
+
   fetchRecipientList() {
     return this.http.get(`${this.baseUrl}transferrecipient`, this.httpOptions);
   }

@@ -82,6 +82,7 @@ export class RecipientCreateComponent implements OnInit {
       res => {
         if (res["status"] === true) {
           alert("Successfully added beneficiary");
+          location.href = "/recipient";
         }
       },
       error => {
