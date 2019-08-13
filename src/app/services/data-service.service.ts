@@ -48,4 +48,8 @@ export class DataServiceService {
   initiateBulkTransfer(obj) {
     return this.http.post(`${this.baseUrl}transfer/bulk`, obj, this.httpOptions);
   }
+
+  fetchTransferList() {
+    return this.http.get(`${this.baseUrl}transfer`, this.httpOptions);
+  }
 }

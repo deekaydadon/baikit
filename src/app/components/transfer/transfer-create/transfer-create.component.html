@@ -7,8 +7,12 @@
 
         <div class="row padding-top30">
             <div class="offset-3 col-lg-6">
-                <button class="btn form-control select-recipient" data-toggle="modal" data-target="#addRecipient">
-                    +Add Recipient
+                <button *ngIf="hasSelectedRecipient"  class="btn form-control select-recipient" data-toggle="modal" data-target="#addRecipient">
+                    +Add more Recipient
+                </button>
+
+                <button *ngIf="!hasSelectedRecipient"  class="btn form-control select-recipient" data-toggle="modal" data-target="#addRecipient">
+                    Select Recipient
                 </button>
             </div>
         </div>
@@ -47,6 +51,28 @@
                     </div>
                 </div>
             </div>
+
+        <div class="row padding-top30">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Reference</th>
+                        <th>Transfer Details</th>
+                        <th>Account Details</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let transfer of transferList">
+                        <td>{{transfer.transfer_code}}</td>
+                        <td><b>{{transfer.currency}} {{(transfer.amount/100).toLocaleString()}}</b> to <b>{{transfer.recipient.name}}</b></td>
+                        <td>{{transfer.recipient.details.account_number}} {{transfer.recipient.details.bank_name}}</td>
+                        <td>{{transfer.createdAt}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </div>
 
 <div class="modal fade" id="addRecipient" tabindex="-1" role="dialog" aria-labelledby="addRecipientLabel" aria-hidden="true">

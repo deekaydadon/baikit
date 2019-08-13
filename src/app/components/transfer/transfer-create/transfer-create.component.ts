@@ -21,13 +21,17 @@ export class TransferCreateComponent implements OnInit {
   isBulkTransfer : Boolean = false;
 
   sendMoneyLoading : Boolean = false;
+
+  transferList : any = [];
   
 
   constructor(private dataService : DataServiceService,  private formBuilder: FormBuilder) {
-    this.getBeneficiaries();
     this.recipientForm = this.formBuilder.group({
       amount: ['', Validators.required]
     });
+
+    this.getTransactionHistory();
+    this.getBeneficiaries();
    }
 
   ngOnInit() {
@@ -57,6 +61,23 @@ export class TransferCreateComponent implements OnInit {
             if (res["data"].length > 0) {
               this.beneficiaries = res["data"];
               this.selectedBeneficiary = this.beneficiaries[0];
+            }
+          }
+      },
+      error => {
+        console.log(error);
+        alert(error["error"].message);
+      }
+    );
+  }
+
+  getTransactionHistory() {
+    this.dataService.fetchTransferList().subscribe(
+      res => {
+          console.log(res);
+          if (res["status"] === true) {
+            if (res["data"].length > 0) {
+              this.transferList = res["data"];
             }
           }
       },
