@@ -8,7 +8,7 @@ import { RecipientUpdateComponent } from './components/recipient/recipient-updat
 import { TransferCreateComponent } from './components/transfer/transfer-create/transfer-create.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: '', component: TransferCreateComponent, pathMatch: 'full'},
   {path: 'recipient', children: [
     {path: '', component: RecipientsComponent, pathMatch: 'full'},
     {path: 'create', component: RecipientCreateComponent, pathMatch: 'full'},

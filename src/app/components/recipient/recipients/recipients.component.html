@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container">
         <div class="row padding-top30">
             <div class="col-lg-12 ">
@@ -5,26 +6,29 @@
             </div>
         </div>
 
-        <div class="row">
-            <table class="table table-bordered ">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Bank</th>
-                    <th>Account Number</th>
-                    <th>Action</th>
-                </tr>
+        <div class="row padding-top30">
+            <table class="table table-striped">
+                <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Bank</th>
+                            <th>Account Number</th>
+                            <th>Action</th>
+                        </tr>
+                </thead>
 
-                <tr *ngFor="let beneficiary of beneficiaries">
-                    <td>{{beneficiary.name}}</td>
-                    <td>{{beneficiary.email}}</td>
-                    <td>{{beneficiary.details.bank_name}}</td>
-                    <td>{{beneficiary.details.account_number}}</td>
-                    <th>
-                        <button class="btn btn-success">Update</button>
-                        <button class="btn btn-danger">Delete</button>
-                    </th>
-                </tr>
+                <tbody>
+                        <tr *ngFor="let beneficiary of beneficiaries">
+                            <td>{{beneficiary.name}}</td>
+                            <td>{{beneficiary.email}}</td>
+                            <td>{{beneficiary.details.bank_name}}</td>
+                            <td>{{beneficiary.details.account_number}}</td>
+                            <th>
+                                <button class="btn btn-danger">Delete</button>
+                            </th>
+                        </tr>
+                </tbody>
             </table>
         </div>
 

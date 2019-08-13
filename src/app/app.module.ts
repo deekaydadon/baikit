@@ -11,6 +11,7 @@ import { RecipientCreateComponent } from './components/recipient/recipient-creat
 import { RecipientUpdateComponent } from './components/recipient/recipient-update/recipient-update.component';
 import { RecipientsComponent } from './components/recipient/recipients/recipients.component';
 import { TransferCreateComponent } from './components/transfer/transfer-create/transfer-create.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TransferCreateComponent } from './components/transfer/transfer-create/t
     RecipientCreateComponent,
     RecipientUpdateComponent,
     RecipientsComponent,
-    TransferCreateComponent
+    TransferCreateComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
