@@ -1,0 +1,15 @@
+.padding-top30 {
+    padding-top: 30px;    
+}
+
+.select-recipient {
+    border-color: #727574;
+}
+
+.recipient {
+    border: 10px thick #aaa;
+    background-color: #f4f3f3;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RecipientCreateComponent } from './components/recipient/recipient-create/recipient-create.component';
 import { RecipientUpdateComponent } from './components/recipient/recipient-update/recipient-update.component';
 import { RecipientsComponent } from './components/recipient/recipients/recipients.component';
+import { TransferCreateComponent } from './components/transfer/transfer-create/transfer-create.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RecipientsComponent } from './components/recipient/recipients/recipient
     HomeComponent,
     RecipientCreateComponent,
     RecipientUpdateComponent,
-    RecipientsComponent
+    RecipientsComponent,
+    TransferCreateComponent
   ],
   imports: [
     BrowserModule,

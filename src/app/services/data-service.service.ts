@@ -40,4 +40,12 @@ export class DataServiceService {
   fetchRecipientList() {
     return this.http.get(`${this.baseUrl}transferrecipient`, this.httpOptions);
   }
+
+  initiateSingleTransfer(obj) {
+    return this.http.post(`${this.baseUrl}transfer`, obj, this.httpOptions);
+  }
+
+  initiateBulkTransfer(obj) {
+    return this.http.post(`${this.baseUrl}transfer/bulk`, obj, this.httpOptions);
+  }
 }
