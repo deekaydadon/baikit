@@ -9,7 +9,7 @@ import { TransferCreateComponent } from './components/transfer/transfer-create/t
 
 const routes: Routes = [
   {path: '', component: TransferCreateComponent, pathMatch: 'full'},
-  {path: '/', component: TransferCreateComponent, pathMatch: 'full'},
+  {path: '**', component: TransferCreateComponent},
   {path: 'recipient', children: [
     {path: '', component: RecipientsComponent, pathMatch: 'full'},
     {path: 'create', component: RecipientCreateComponent, pathMatch: 'full'},
