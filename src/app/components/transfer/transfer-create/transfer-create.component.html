@@ -41,7 +41,7 @@
                     <div  *ngIf="hasSelectedRecipient" class="padding-top30">
                         <div *ngIf="!isBulkTransfer" class="form-group">
                             <label>Narration:</label>
-                            <input type="text" class="form-control" formControlName="narration" />
+                            <input type="text" class="form-control" />
                         </div>
                         <button *ngIf="!sendMoneyLoading" class="btn form-control btn-primary" (click)="sendMoney()">
                             Send ₦{{totalAmount}}

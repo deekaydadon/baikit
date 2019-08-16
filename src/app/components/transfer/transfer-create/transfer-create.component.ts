@@ -198,7 +198,7 @@ export class TransferCreateComponent implements OnInit {
 
     const payload = {
       source: "balance",
-      reason: this.recipientList[0].narration,
+      reason: "no reason",
       amount: this.recipientList[0].amount * 100,
       currency: "NGN",
       transfers
