@@ -86,7 +86,7 @@ export class TransferCreateComponent implements OnInit {
       }
     );
   }
-
+  
   addRecipient() {
     if (this.recipientForm.invalid) {
       this.recipientFormHasError = true;

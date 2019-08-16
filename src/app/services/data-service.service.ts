@@ -56,4 +56,8 @@ export class DataServiceService {
   fetchTransferList() {
     return this.http.get(`${this.baseUrl}transfer`, this.httpOptions);
   }
+
+  fetchBalance() {
+    return this.http.get(`${this.baseUrl}balance`, this.httpOptions);
+  }
 }
